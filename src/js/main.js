@@ -98,12 +98,15 @@
     }
   });
 
+  // modalSuccessが表示されたタイミングでmodalLoadingを非表示にする
+  $("#modalSuccess").on('shown.bs.modal', function () {
+    $('#modalLoading').modal('hide')
+  });
 
   // 投稿処理
   $('#to-modalLoading').on('click', function (e) {
     e.preventDefault();
-  
-    $('#modalPost').modal('hide');
+
     $('#modalLoading').modal('show');
 
     let date = $('input[name="date"]').val().slice(0, -1).replace('年', '-').replace('月', '-');
@@ -131,6 +134,8 @@
     })
     .done(function (data) {
       console.log(data);
+      const modalLoading = document.getElementById('modalLoading')
+      modalLoading.style.display = 'none'
       $('#modalLoading').modal('hide');
       $('#modalSuccess').modal('show');
       $('form')[0].reset();
