@@ -101,6 +101,7 @@
   // modalSuccessが表示されたタイミングでmodalLoadingを非表示にする
   $("#modalSuccess").on('shown.bs.modal', function () {
     $('#modalLoading').modal('hide')
+    $('#modalPost').modal('hide')
   });
 
   // 投稿処理
