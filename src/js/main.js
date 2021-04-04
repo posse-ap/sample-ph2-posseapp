@@ -98,12 +98,15 @@
     }
   });
 
+  // modalSuccessが表示されたタイミングでmodalLoadingを非表示にする
+  $("#modalSuccess").on('shown.bs.modal', function () {
+    $('#modalLoading').modal('hide')
+    $('#modalPost').modal('hide')
+  });
 
   // 投稿処理
   $('#to-modalLoading').on('click', function (e) {
     e.preventDefault();
-  
-    $('#modalPost').modal('hide');
     $('#modalLoading').modal('show');
 
     let date = $('input[name="date"]').val().slice(0, -1).replace('年', '-').replace('月', '-');
