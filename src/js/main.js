@@ -146,6 +146,7 @@
     
       displayFixedHours();
       displayThisMonth();
+      google.charts.setOnLoadCallback(drawChart);
     })
     .fail(function (XMLHttpRequest, textStatus, errorThrown) {
       console.log("XMLHttpRequest : " + XMLHttpRequest.status);
