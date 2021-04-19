@@ -224,9 +224,8 @@
       [columnChartData[25]['date'], columnChartData[25]['hour'], columnChartData[25]['color']],
       [columnChartData[26]['date'], columnChartData[26]['hour'], columnChartData[26]['color']],
       [columnChartData[27]['date'], columnChartData[27]['hour'], columnChartData[27]['color']],
-      [columnChartData[28]['date'], columnChartData[28]['hour'], columnChartData[28]['color']],
-      [columnChartData[29]['date'], columnChartData[29]['hour'], columnChartData[29]['color']],
     ]);
+
     var view = new google.visualization.DataView(data);
     view.setColumns([0, 1,
       {

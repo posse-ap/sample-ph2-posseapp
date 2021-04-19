@@ -228,21 +228,14 @@ body{
     padding-right: 4px;
   }
   
-  .language-tag span::before,
-  .contents-tag span::before{
-    display: inline-block;
-    vertical-align: middle;
-    content: '';
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 2px;
-    background-color: #0f71bc;
-  }
-  
   .post-btn{
     width: 100%;
     margin: 20px 0;
+  }
+
+  .circle{
+    width: 10px;
+    height: 10px;
   }
 }
 /* responsive */
@@ -547,6 +540,12 @@ body{
   border-radius: 50%;
   color: #fff;
   cursor: pointer;
+}
+
+#calendarClicked {
+  background-color: rgba(15, 113, 188, .6);
+  border-radius: 50%;
+  color: #fff;
 }
 
 @media screen and (max-width: 992px){
