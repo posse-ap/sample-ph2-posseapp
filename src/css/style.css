@@ -523,11 +523,11 @@ body{
 
 .modal-calendar td{
   font-size: 15px;
-  color: #000;
+  color: gray;
 }
 
 .modal-calendar .past-days{
-  color: gray;
+  color: #000;
   cursor: pointer;
 }
 
@@ -546,6 +546,10 @@ body{
   background-color: rgba(15, 113, 188, .6);
   border-radius: 50%;
   color: #fff;
+}
+
+.modal-calendar .today#calendarClicked {
+  background-color: #0f71bc;
 }
 
 @media screen and (max-width: 992px){

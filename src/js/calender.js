@@ -62,6 +62,7 @@
 
     if(calendarYear === calendarToday.getFullYear() && calendarMonth === calendarToday.getMonth()){
       dates[calendarToday.getDate() - 1].today = true;
+      dates[calendarToday.getDate() - 1].pastDays = true;
     }
 
     return dates;
