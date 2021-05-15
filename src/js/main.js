@@ -194,37 +194,12 @@
       }
     });
 
-    var data = google.visualization.arrayToDataTable([
-      ["Date", "Hour", { role: "style" }],
-      [columnChartData[0]['date'], columnChartData[0]['hour'], columnChartData[0]['color']],
-      [columnChartData[1]['date'], columnChartData[1]['hour'], columnChartData[1]['color']],
-      [columnChartData[2]['date'], columnChartData[2]['hour'], columnChartData[2]['color']],
-      [columnChartData[3]['date'], columnChartData[3]['hour'], columnChartData[3]['color']],
-      [columnChartData[4]['date'], columnChartData[4]['hour'], columnChartData[4]['color']],
-      [columnChartData[5]['date'], columnChartData[5]['hour'], columnChartData[5]['color']],
-      [columnChartData[6]['date'], columnChartData[6]['hour'], columnChartData[6]['color']],
-      [columnChartData[7]['date'], columnChartData[7]['hour'], columnChartData[7]['color']],
-      [columnChartData[8]['date'], columnChartData[8]['hour'], columnChartData[8]['color']],
-      [columnChartData[9]['date'], columnChartData[9]['hour'], columnChartData[9]['color']],
-      [columnChartData[10]['date'], columnChartData[10]['hour'], columnChartData[10]['color']],
-      [columnChartData[11]['date'], columnChartData[11]['hour'], columnChartData[11]['color']],
-      [columnChartData[12]['date'], columnChartData[12]['hour'], columnChartData[12]['color']],
-      [columnChartData[13]['date'], columnChartData[13]['hour'], columnChartData[13]['color']],
-      [columnChartData[14]['date'], columnChartData[14]['hour'], columnChartData[14]['color']],
-      [columnChartData[15]['date'], columnChartData[15]['hour'], columnChartData[15]['color']],
-      [columnChartData[16]['date'], columnChartData[16]['hour'], columnChartData[16]['color']],
-      [columnChartData[17]['date'], columnChartData[17]['hour'], columnChartData[17]['color']],
-      [columnChartData[18]['date'], columnChartData[18]['hour'], columnChartData[18]['color']],
-      [columnChartData[19]['date'], columnChartData[19]['hour'], columnChartData[19]['color']],
-      [columnChartData[20]['date'], columnChartData[20]['hour'], columnChartData[20]['color']],
-      [columnChartData[21]['date'], columnChartData[21]['hour'], columnChartData[21]['color']],
-      [columnChartData[22]['date'], columnChartData[22]['hour'], columnChartData[22]['color']],
-      [columnChartData[23]['date'], columnChartData[23]['hour'], columnChartData[23]['color']],
-      [columnChartData[24]['date'], columnChartData[24]['hour'], columnChartData[24]['color']],
-      [columnChartData[25]['date'], columnChartData[25]['hour'], columnChartData[25]['color']],
-      [columnChartData[26]['date'], columnChartData[26]['hour'], columnChartData[26]['color']],
-      [columnChartData[27]['date'], columnChartData[27]['hour'], columnChartData[27]['color']],
-    ]);
+    var dataarray = new Array();
+    dataarray.push(["Date", "Hour", { role: "style" }]);
+    for(var i=0; i<=30; i++){
+      dataarray.push([columnChartData[i]['date'], columnChartData[i]['hour'], columnChartData[i]['color']]);
+    }
+    var data = google.visualization.arrayToDataTable(dataarray);
 
     var view = new google.visualization.DataView(data);
     view.setColumns([0, 1,
