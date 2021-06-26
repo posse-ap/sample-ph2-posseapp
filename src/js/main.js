@@ -196,7 +196,7 @@
 
     var dataarray = new Array();
     dataarray.push(["Date", "Hour", { role: "style" }]);
-    for(var i=0; i<=30; i++){
+    for(var i=0; i<columnChartData.length; i++){
       dataarray.push([columnChartData[i]['date'], columnChartData[i]['hour'], columnChartData[i]['color']]);
     }
     var data = google.visualization.arrayToDataTable(dataarray);
@@ -266,17 +266,12 @@
       }
     })
 
-    var data = google.visualization.arrayToDataTable([
-      ['Language', 'Hour'],
-      [pieLangagesData[0]['language'], pieLangagesData[0]['hour']],
-      [pieLangagesData[1]['language'], pieLangagesData[1]['hour']],
-      [pieLangagesData[2]['language'], pieLangagesData[2]['hour']],
-      [pieLangagesData[3]['language'], pieLangagesData[3]['hour']],
-      [pieLangagesData[4]['language'], pieLangagesData[4]['hour']],
-      [pieLangagesData[5]['language'], pieLangagesData[5]['hour']],
-      [pieLangagesData[6]['language'], pieLangagesData[6]['hour']],
-      [pieLangagesData[7]['language'], pieLangagesData[7]['hour']],
-    ]);
+    var dataarray = new Array();
+    dataarray.push(["Language", "Hour"]);
+    for(var i=0; i<pieLangagesData.length; i++){
+      dataarray.push([pieLangagesData[i]['language'], pieLangagesData[i]['hour']]);
+    }
+    var data = google.visualization.arrayToDataTable(dataarray);
   
     var options = {
       legend: {
@@ -285,28 +280,28 @@
       pieHole: 0.5,
       slices: {
         0: {
-          color: '#59DEEB'
+          color: '#0345ec'
         },
         1: {
-          color: '#49BCF2'
+          color: '#0f71bd'
         },
         2: {
-          color: '#4D8DDB'
+          color: '#20bdde'
         },
         3: {
-          color: '#496EF2'
+          color: '#3ccefe'
         },
         4: {
-          color: '#4F4DEB'
+          color: '#b29ef3'
         },
         5: {
-          color: '#633BD4'
+          color: '#6d46ec'
         },
         6: {
-          color: '#A34DF8'
+          color: '#4a17ef'
         },
         7: {
-          color: '#B63AE0'
+          color: '#3105c0'
         }
       },
       chartArea: {
@@ -336,12 +331,12 @@
       }
     })
 
-    var data = google.visualization.arrayToDataTable([
-      ['Content', 'Hour'],
-      [pieContentsData[0]['content'], pieContentsData[0]['hour']],
-      [pieContentsData[1]['content'], pieContentsData[1]['hour']],
-      [pieContentsData[2]['content'], pieContentsData[2]['hour']],
-    ]);
+    var dataarray = new Array();
+    dataarray.push(["Content", "Hour"]);
+    for(var i=0; i<pieContentsData.length; i++){
+      dataarray.push([pieContentsData[i]['content'], pieContentsData[i]['hour']]);
+    }
+    var data = google.visualization.arrayToDataTable(dataarray);
   
     var options = {
       legend: {
@@ -350,13 +345,13 @@
       pieHole: 0.5,
       slices: {
         0: {
-          color: '#A3E0FF'
+          color: '#0345ec'
         },
         1: {
-          color: '#72CDFA'
+          color: '#0f71bd'
         },
         2: {
-          color: '#3184AD'
+          color: '#20bdde'
         },
       },
       chartArea: {

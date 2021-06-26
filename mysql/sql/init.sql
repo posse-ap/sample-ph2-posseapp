@@ -66,14 +66,14 @@ CREATE TABLE languages (
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO languages SET language='HTML', color_code='#59DEEB';
-INSERT INTO languages SET language='CSS', color_code='#49BCF2';
-INSERT INTO languages SET language='JavaScript', color_code='#4D8DDB';
-INSERT INTO languages SET language='PHP', color_code='#496EF2';
-INSERT INTO languages SET language='Laravel', color_code='#4F4DEB';
-INSERT INTO languages SET language='SQL', color_code='#633BD4';
-INSERT INTO languages SET language='SHELL', color_code='#A34DF8';
-INSERT INTO languages SET language='情報システム基礎知識(その他)', color_code='#B63AE0';
+INSERT INTO languages SET language='HTML', color_code='#0345ec';
+INSERT INTO languages SET language='CSS', color_code='#0f71bd';
+INSERT INTO languages SET language='JavaScript', color_code='#20bdde';
+INSERT INTO languages SET language='PHP', color_code='#3ccefe';
+INSERT INTO languages SET language='Laravel', color_code='#b29ef3';
+INSERT INTO languages SET language='SQL', color_code='#6d46ec';
+INSERT INTO languages SET language='SHELL', color_code='#4a17ef';
+INSERT INTO languages SET language='情報システム基礎知識(その他)', color_code='#3105c0';
 
 DROP TABLE IF EXISTS contents;
 CREATE TABLE contents (
@@ -84,6 +84,6 @@ CREATE TABLE contents (
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO contents SET content='ドットインストール', color_code='#A3E0FF';
-INSERT INTO contents SET content='N予備校', color_code='#72CDFA';
-INSERT INTO contents SET content='POSSE課題', color_code='#3184AD';
+INSERT INTO contents SET content='ドットインストール', color_code='#0345ec';
+INSERT INTO contents SET content='N予備校', color_code='#0f71bd';
+INSERT INTO contents SET content='POSSE課題', color_code='#20bdde';
