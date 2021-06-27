@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 * {
   font-family: 'Poppins', sans-serif;
 }
@@ -98,6 +98,7 @@ body{
 .time-cards-title{
   color: #0f71bc;
   font-size: 22px;
+  font-weight: 500;
 }
 
 .month-card{
@@ -106,6 +107,7 @@ body{
 
 .hour{
   font-size: 22px;
+  font-weight: 300;
 }
 
 .language-card, .contents-card {
