@@ -76,6 +76,8 @@ body{
 .card {
   background-color: #fff;
   border-radius: 14px;
+  border: none;
+  box-shadow: 0 0 5px #ddd;
 }
 
 .card > img{
