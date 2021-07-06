@@ -44,18 +44,18 @@ if (isset($_SESSION['user_id']) && $_SESSION['time'] + 60 * 60 * 24 > time()) {
         <div class="left-cards">
           <div class="time-cards d-flex justify-content-between">
             <div class="card today-card text-center">
-              <p class="time-cards-title mt-2 mt-lg-3 mb-0">Today</p>
-              <p class="font-weight-bold h2 lg-h1 my-1 my-lg-2" id="today_hour"></p>
+              <p class="time-cards-title mt-2 mt-lg-3 mb-0 mb-md-1">Today</p>
+              <p class="font-weight-bold h1 my-1 my-lg-2" id="today_hour"></p>
               <p class="mb-2 mb-lg-3 text-muted hour">hour</p>
             </div>
             <div class="card month-card text-center">
-              <p class="time-cards-title mt-2 mt-lg-3 mb-0">Month</p>
-              <p class="font-weight-bold h2 lg-h1 my-1 my-lg-2" id="month_hour"></p>
+              <p class="time-cards-title mt-2 mt-lg-3 mb-0 mb-md-1">Month</p>
+              <p class="font-weight-bold h1 my-1 my-lg-2" id="month_hour"></p>
               <p class="mb-2 mb-lg-3 text-muted hour">hour</p>
             </div>
             <div class="card total-card text-center">
-              <p class="time-cards-title mt-2 mt-lg-3 mb-0">Total</p>
-              <p class="font-weight-bold h2 lg-h1 my-1 my-lg-2" id="total_hour"></p>
+              <p class="time-cards-title mt-2 mt-lg-3 mb-0 mb-md-1">Total</p>
+              <p class="font-weight-bold h1 my-1 my-lg-2" id="total_hour"></p>
               <p class="mb-2 mb-lg-3 text-muted hour">hour</p>
             </div>
           </div>

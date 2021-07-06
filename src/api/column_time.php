@@ -13,11 +13,7 @@ foreach($stmt->fetchAll() as $index => $column_time_data) {
   $date = substr($column_time_data['study_date'], -2);
   $column_time[$index]['date'] = $date;
   $column_time[$index]['hour'] = $column_time_data['total_hour'];
-  if($index % 2 == 0) {
-    $column_time[$index]['color'] = '#0f71bc';
-  }else {
-    $column_time[$index]['color'] = '#3ccfff';
-  }
+  $column_time[$index]['color'] = '#0f71bc';
 }
 
 echo json_encode($column_time);
