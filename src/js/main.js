@@ -79,7 +79,7 @@
   
   contentsSelectBox.addEventListener('click', ()=>{
     if(!contentsExpanded){
-      contentsCheckbox.style.display = "block";
+      contentsCheckbox.style.display = "flex";
       contentsExpanded = true;
     }else{
       contentsCheckbox.style.display = "none";
@@ -93,7 +93,7 @@
 
   languageSelectBox.addEventListener('click', ()=>{
     if(!languageExpanded){
-      languageCheckbox.style.display = "block";
+      languageCheckbox.style.display = "flex";
       languageExpanded = true;
     }else{
       languageCheckbox.style.display = "none";
@@ -114,16 +114,7 @@
     $('#modalLoading').modal('show');
 
     let date = $('input[name="date"]').val().slice(0, -1).replace('年', '-').replace('月', '-');
-    let contents = [];
-    let languages = [];
     let study_hour = $('input[name="study_hour"]').val();
-
-    $('input[name="contents[]"]:checked').each(function () {
-      contents.push($(this).val());
-    });
-    $('input[name="languages[]"]:checked').each(function () {
-      languages.push($(this).val());
-    });
 
     $.ajax({
       url: 'api/post.php',
@@ -131,8 +122,8 @@
       dataType: 'text',
       data: {
         date: date,
-        contents: contents,
-        languages: languages,
+        content: $('input[name="content"]:checked').val(),
+        language: $('input[name="language"]:checked').val(),
         study_hour: study_hour
       }
     })
