@@ -124,97 +124,135 @@ if (isset($_SESSION['user_id']) && $_SESSION['time'] + 60 * 60 * 24 > time()) {
                   <input type="text" id="studyDate" data-toggle="modal" data-target="#modalCalendar" name="date" readonly>
                 </div>
                 <div class="modal-contents-pc-part d-none d-lg-block pt-3">
-                  <p class="font-weight-bold modal-title">学習コンテンツ (複数選択可)</p>
-                  <input id="contents2" type="checkbox" value="1" name="contents[]">
-                  <label for="contents2">ドットインストール</label>
-
-                  <input id="contents1" type="checkbox" value="2" name="contents[]">
-                  <label for="contents1">N予備校</label>
-
-
-                  <input id="contents3" type="checkbox" value="3" name="contents[]">
-                  <label for="contents3">POSSE課題</label>
+                  <p class="font-weight-bold modal-title">学習コンテンツ</p>
+                  <label for="contents2" class="form-check form-check-inline">
+                    <input id="contents2" type="radio" value="1" name="content" class="form-check-input">
+                    ドットインストール
+                  </label>
+                  <label for="contents1" class="form-check form-check-inline">
+                    <input id="contents1" type="radio" value="2" name="content" class="form-check-input">
+                    N予備校
+                  </label>
+                  <label for="contents3" class="form-check form-check-inline">
+                    <input id="contents3" type="radio" value="3" name="content" class="form-check-input">
+                    POSSE課題
+                  </label>
                 </div>
 
                 <div class="modal-contents-sp-part d-block d-lg-none pt-3">
-                  <p class="font-weight-bold modal-title">学習コンテンツ (複数選択可)</p>
+                  <p class="font-weight-bold modal-title">学習コンテンツ</p>
                   <div class="modal-contents-select-box" id="modal-contents-select-box">
                     <select>
                       <option>N予備校</option>
                     </select>
                     <div class="modal-contents-over-select"></div>
                   </div>
-                  <div id="modal-contents-check-box">
-                    <input type="checkbox" id="contents5" value="1" name="contents[]">
-                    <label for="contents5">ドットインストール</label>
-
-                    <input type="checkbox" id="contents4" value="2" name="contents[]">
-                    <label for="contents4">N予備校</label>
-
-                    <input type="checkbox" id="contents6" value="3" name="contents[]">
-                    <label for="contents6">POSSE課題</label>
+                  <div id="modal-contents-check-box" class="flex-column p-2">
+                    <label for="contents5" class="form-check">
+                      <input type="radio" id="contents5" value="1" name="content" class="form-check-input">
+                      ドットインストール
+                    </label>
+                    <label for="contents4" class="form-check">
+                      <input type="radio" id="contents4" value="2" name="content" class="form-check-input">
+                      N予備校
+                    </label>
+                    <label for="contents6" class="form-check">
+                      <input type="radio" id="contents6" value="3" name="content" class="form-check-input">
+                      POSSE課題
+                    </label>
                   </div>
                 </div>
 
                 <div class="modal-language-pc-part d-none d-lg-block pt-3">
-                  <p class="font-weight-bold modal-title">学習言語 (複数選択可)</p>
-                  <input id="language1" type="checkbox" value="1" name="languages[]">
-                  <label for="language1">HTML</label>
-
-                  <input id="language2" type="checkbox" value="2" name="languages[]">
-                  <label for="language2">CSS</label>
-
-                  <input id="language3" type="checkbox" value="3" name="languages[]">
-                  <label for="language3">JavaScript</label>
-
-                  <input id="language4" type="checkbox" value="4" name="languages[]">
-                  <label for="language4">PHP</label>
-
-                  <input id="language5" type="checkbox" value="5" name="languages[]">
-                  <label for="language5">Laravel</label>
-
-                  <input id="language6" type="checkbox" value="6" name="languages[]">
-                  <label for="language6">SQL</label>
-
-                  <input id="language7" type="checkbox" value="7" name="languages[]">
-                  <label for="language7">SHELL</label>
-
-                  <input id="language8" type="checkbox" value="8" name="languages[]">
-                  <label for="language8">情報システム基礎知識(その他)</label>
+                  <p class="font-weight-bold modal-title">学習言語</p>
+                  <label for="language1" class="form-check form-check-inline">
+                    <input id="language1" type="radio" value="1" name="language" class="form-check-input">
+                    HTML
+                  </label>
+                  <label for="language2" class="form-check form-check-inline">
+                    <input id="language2" type="radio" value="2" name="language" class="form-check-input">
+                    CSS
+                  </label>
+                  <label for="language3" class="form-check form-check-inline">
+                    <input id="language3" type="radio" value="3" name="language" class="form-check-input">
+                    JavaScript
+                  </label>
+                  <label for="language4" class="form-check form-check-inline">
+                    <input id="language4" type="radio" value="4" name="language" class="form-check-input">
+                    PHP
+                  </label>
+                  <label for="language5" class="form-check form-check-inline">
+                    <input id="language5" type="radio" value="5" name="language" class="form-check-input">
+                    Laravel
+                  </label>
+                  <label for="language6" class="form-check form-check-inline">
+                    <input id="language6" type="radio" value="6" name="language" class="form-check-input">
+                    SQL
+                  </label>
+                  <label for="language7" class="form-check form-check-inline">
+                    <input id="language7" type="radio" value="7" name="language" class="form-check-input">
+                    SHELL
+                  </label>
+                  <label for="language8" class="form-check form-check-inline">
+                    <input id="language8" type="radio" value="8" name="language" class="form-check-input">
+                    情報システム基礎知識(その他)
+                  </label>
                 </div>
 
                 <div class="modal-language-sp-part d-block d-lg-none pt-3">
-                  <p class="font-weight-bold modal-title">学習言語 (複数選択可)</p>
+                  <p class="font-weight-bold modal-title">学習言語</p>
                   <div class="modal-language-select-box" id="modal-language-select-box">
                     <select>
                       <option>HTML</option>
                     </select>
                     <div class="modal-language-over-select"></div>
                   </div>
-                  <div id="modal-language-check-box">
-                    <input id="language9" type="checkbox" value="1" name="languages[]">
-                    <label for="language9">HTML</label>
+                  <div id="modal-language-check-box" class="flex-column p-2">
 
-                    <input id="language10" type="checkbox" value="2" name="languages[]">
-                    <label for="language10">CSS</label>
+                    <label for="language9" class="form-check">
+                      <input id="language9" type="radio" value="1" name="language" class="form-check-input">
+                      HTML
+                    </label>
 
-                    <input id="language11" type="checkbox" value="3" name="languages[]">
-                    <label for="language11">JavaScript</label>
+                    <label for="language10" class="form-check">
+                      <input id="language10" type="radio" value="2" name="language" class="form-check-input">
+                      CSS
+                    </label>
 
-                    <input id="language12" type="checkbox" value="4" name="languages[]">
-                    <label for="language12">PHP</label>
 
-                    <input id="language13" type="checkbox" value="5" name="languages[]">
-                    <label for="language13">Laravel</label>
+                    <label for="language11" class="form-check">
+                      <input id="language11" type="radio" value="3" name="language" class="form-check-input">
+                      JavaScript
+                    </label>
 
-                    <input id="language14" type="checkbox" value="6" name="languages[]">
-                    <label for="language14">SQL</label>
+                    <label for="language12" class="form-check">
+                      <input id="language12" type="radio" value="4" name="language" class="form-check-input">
+                      PHP
+                    </label>
 
-                    <input id="language15" type="checkbox" value="7" name="languages[]">
-                    <label for="language15">SHELL</label>
 
-                    <input id="language16" type="checkbox" value="8" name="languages[]">
-                    <label for="language16">情報システム基礎知識(その他)</label>
+                    <label for="language13" class="form-check">
+                      <input id="language13" type="radio" value="5" name="language" class="form-check-input">
+                      Laravel
+                    </label>
+
+
+                    <label for="language14" class="form-check">
+                      <input id="language14" type="radio" value="6" name="language" class="form-check-input">
+                      SQL
+                    </label>
+
+
+                    <label for="language15" class="form-check">
+                      <input id="language15" type="radio" value="7" name="language" class="form-check-input">
+                      SHELL
+                    </label>
+
+
+                    <label for="language16" class="form-check">
+                      <input id="language16" type="radio" value="8" name="language" class="form-check-input">
+                      情報システム基礎知識(その他)
+                    </label>
                   </div>
                 </div>
               </div>
